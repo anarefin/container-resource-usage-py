@@ -8,25 +8,50 @@ This Python script collects real-time Docker container statistics and saves them
 - Monitors CPU usage, memory usage, and disk I/O
 - Saves data to CSV format for further analysis
 - Supports monitoring of specific containers by name or ID
+- Analyzes maximum resource usage from collected statistics
 
 ## Prerequisites
 
 - Python 3.x
 - Docker installed and running
-- Required Python packages:
-  - argparse
-  - subprocess
+
+## Installation
+
+1. Clone the repository
+
+2. Create and activate a virtual environment:
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate on Windows
+venv\Scripts\activate
+
+# Activate on Linux/Mac
+source venv/bin/activate
+```
+
+3. Install required packages:
+```bash
+pip install -r requirements.txt
+```
+
+## Required Python packages:
+- argparse
+- subprocess
+- pandas
 
 ## Usage
 
 Run the script with a container name or ID:
 ```bash
-python main.py CONTAINER_NAME [--output OUTPUT_FILE]
+python main.py CONTAINER_NAME [--output OUTPUT_FILE] [--analyze]
 ```
 
 Options:
 - `CONTAINER_NAME`: Name or ID of the Docker container to monitor (required)
 - `--output`: Output CSV file path (default: container_stats.csv)
+- `--analyze`: Analyze existing statistics file instead of collecting new data
 
 ## Stopping the Collection
 
