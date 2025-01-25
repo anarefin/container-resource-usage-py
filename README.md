@@ -9,6 +9,7 @@ This Python script collects real-time Docker container statistics and saves them
 - Saves data to CSV format for further analysis
 - Supports monitoring of specific containers by name or ID
 - Analyzes maximum resource usage from collected statistics
+- Generates time-series graphs for resource usage
 
 ## Prerequisites
 
@@ -40,18 +41,27 @@ pip install -r requirements.txt
 - argparse
 - subprocess
 - pandas
+- matplotlib
 
 ## Usage
 
 Run the script with a container name or ID:
 ```bash
-python main.py CONTAINER_NAME [--output OUTPUT_FILE] [--analyze]
+# Collect statistics
+python main.py CONTAINER_NAME [--output OUTPUT_FILE]
+
+# Analyze statistics
+python main.py CONTAINER_NAME --analyze
+
+# Generate graphs
+python main.py CONTAINER_NAME --graphs
 ```
 
 Options:
 - `CONTAINER_NAME`: Name or ID of the Docker container to monitor (required)
 - `--output`: Output CSV file path (default: container_stats.csv)
-- `--analyze`: Analyze existing statistics file instead of collecting new data
+- `--analyze`: Analyze existing statistics file
+- `--graphs`: Generate resource usage graphs
 
 ## Stopping the Collection
 
