@@ -14,6 +14,9 @@ def collect_container_stats(container_name, output_file):
         container_name (str): The name or ID of the Docker container.
         output_file (str): Path to the output file.
     """
+    # Clear the file contents before starting
+    open(output_file, "w").close()
+
     with open(output_file, "a") as f:
         # Add a header to the file
         f.write(
@@ -58,7 +61,7 @@ def collect_container_stats(container_name, output_file):
                     f.flush()  # Ensure data is written immediately
 
                 # Wait for 5 seconds
-                time.sleep(5)
+                time.sleep(1)
             except KeyboardInterrupt:
                 print("\nExiting on user interruption...")
                 break
@@ -119,10 +122,6 @@ def analyze_max_usage(csv_file):
         print(f"Memory: {df.at[mem_peak_idx, 'Timestamp']}")
         print(f"Disk Read: {df.at[disk_read_peak_idx, 'Timestamp']}")
         print(f"Disk Write: {df.at[disk_write_peak_idx, 'Timestamp']}")
-
-        # Empty the CSV file after analysis
-        open(csv_file, "w").close()
-        print(f"\nCleared contents of {csv_file}")
 
     except FileNotFoundError:
         print(f"Error: Could not find {csv_file}")
