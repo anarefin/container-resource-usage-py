@@ -1,0 +1,10 @@
+Timestamp,Container,CPU_Usage,Memory_Usage,Memory_Percent,Disk_Read,Disk_Write
+2025-01-25 11:21:33,timescaledb,0.68%,107.9MiB / 9.704GiB,1.09%,266kB,92.5MB
+2025-01-25 11:21:40,timescaledb,0.83%,107.8MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:21:47,timescaledb,0.00%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:21:54,timescaledb,0.00%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:22:01,timescaledb,0.04%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:22:08,timescaledb,0.01%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:22:15,timescaledb,0.00%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:22:22,timescaledb,0.00%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
+2025-01-25 11:22:29,timescaledb,0.01%,107.5MiB / 9.704GiB,1.08%,266kB,92.5MB
